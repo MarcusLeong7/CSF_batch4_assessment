@@ -9,7 +9,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import vttp.batch4.csf.ecommerce.models.Order;
 import vttp.batch4.csf.ecommerce.services.PurchaseOrderService;
 
@@ -44,6 +47,8 @@ public class OrderController {
       JsonObject errResp = Json.createObjectBuilder()
               .add("message", ex.getMessage())
               .build();
+
+      System.out.println(errResp.toString());
 
       // Return 400 status with the error message
       return ResponseEntity.status(HttpStatus.BAD_REQUEST)
