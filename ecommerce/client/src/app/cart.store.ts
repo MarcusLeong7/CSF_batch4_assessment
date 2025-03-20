@@ -47,7 +47,7 @@ export class CartStore extends ComponentStore<Cart>{
     };
   });
 
-  // Effect to add a product to the cart
+/*  // Effect to add a product to the cart
   // Transforming a product to a line item format to be added into cart state
   readonly addProductToCart =
     // Takes an observerable (product$)
@@ -64,6 +64,6 @@ export class CartStore extends ComponentStore<Cart>{
         this.addLineItem(lineItem);
       })
     );
-  });
+  });*/
 }
 
